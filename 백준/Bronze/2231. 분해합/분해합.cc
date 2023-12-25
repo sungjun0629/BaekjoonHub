@@ -6,16 +6,12 @@ using namespace std;
 int N;
 int makeConstructor(int k)
 {
-	string str = to_string(k);
-	int rst;
-	if (str.size() != 1) rst = k;
-	else {
-		rst = 0;
-		return k + k; 
-	}
-	for (int i = 0; i < str.size(); i++)
+	int rst = k;
+
+	while (k > 0)
 	{
-		rst += (int)(str[i])- 48;
+		rst += k % 10;
+		k /= 10;
 	}
 
 	return rst;
