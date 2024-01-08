@@ -46,10 +46,10 @@ void go(int a,  int cnt)
 		return;
 	}
 
-	// 1번부터 N까지의 세로선 
+	// 1번부터 H까지의 가로선
 	for (int i = a; i <= H; i++)
 	{
-		// 1번부터 H번까지의 가로선
+		// 1번부터 N번까지의 세로선
 		for (int j = 1; j < N; j++)
 		{
 			// 가로선이 연속되지 않을 경우
@@ -81,7 +81,7 @@ int main()
 
 	// i번 세로선의 결과가 i번이 나와야 한다. 
 	// 최소의 가로선을 추가할 수 있다(<=3) 
-	go(1, 0);
+	go(1,0);
 
 	rst = (rst == MAX_NUMBER) ? -1 : rst;
 	cout << rst;
