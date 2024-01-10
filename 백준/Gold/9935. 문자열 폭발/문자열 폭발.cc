@@ -1,48 +1,59 @@
-#include <iostream>
-
+#include<iostream>
+#include<string>
 using namespace std;
 
-string str, bomb;
-string ret;
+string s; string bomb;
+string rst; int sLen;
 
 int main()
 {
-	cin>>str>>bomb; 
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
 
-	for(int i = 0 ; i<str.size(); i++)
+	cin >> s >> bomb;
+	sLen = s.size();
+
+	// 배열에 문자열 하나씩을 담는다. 
+	// 담은 후 문자열 끝에서부터 비교
+	// 그것을 제외하고 다시 담는다.  
+	int idx = 0;
+	while (true)
 	{
+		if (idx >= sLen) break;
 
-		string compartStr;
-		if (ret.size() < bomb.size())
+		if (rst.size() < bomb.size())
 		{
-			ret += str[i];
-			//cout<<"추가 : "<<ret<<endl;
+			rst += s[idx++];
 		}
-		else {
-
-			compartStr	= ret.substr(ret.size()-bomb.size(), bomb.size());
-			//cout<<"Parsing : "<< compartStr<<endl;
-
-			if (compartStr == bomb)
+		// 비교를 한다.
+		else
+		{
+			if (rst.substr(rst.size() - bomb.size(), bomb.size()) == bomb)
 			{
-				ret.erase(ret.end() - bomb.size(), ret.end());
+				rst.erase(rst.end() - bomb.size(), rst.end());
 			}
-			ret += str[i];
+			else 
+			{
+				rst += s[idx++];
+			}
 		}
+		
 	}
 
-	if(ret.size()>=bomb.size())
+	if (rst.size() >= bomb.size() && rst.substr(rst.size() - bomb.size(), bomb.size()) == bomb)
 	{
-		string compartStr = ret.substr(ret.size() - bomb.size(), bomb.size());
-		//cout << "Parsing : " << compartStr << endl;
-
-		if (compartStr == bomb)
-		{
-			ret.erase(ret.end() - bomb.size(), ret.end());
-		}
+		rst.erase(rst.end() - bomb.size(), rst.end());
 	}
 
-	if(!ret.size()) ret = "FRULA";
-	cout<<ret;
 
+		 
+	if (rst.size())
+	{
+		cout << rst;
+	}
+	else
+	{
+		cout << "FRULA";
+	}
+	return 0;
 }
