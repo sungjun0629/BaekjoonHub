@@ -88,9 +88,9 @@ void melt()
 	}
 
 	// 다음에 탐색할 물의 좌표
-	//q = q_temp;
+	q = q_temp;
 	// 큐 초기화
-	//Qclear(q_temp);
+	Qclear(q_temp);
 	ret++;
 }
 
@@ -130,10 +130,10 @@ int main()
 	while (!check_meet(loc.first , loc.second))
 	{
 		melt();
-		q = q_temp;
-		//l = l_temp;
-		//Qclear(l_temp);
-		Qclear(q_temp);
+	/*	q = q_temp;
+		l = l_temp;
+		Qclear(l_temp);
+		Qclear(q_temp);*/
 
 	}
 	
