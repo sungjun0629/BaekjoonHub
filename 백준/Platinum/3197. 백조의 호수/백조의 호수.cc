@@ -36,8 +36,8 @@ bool check_meet(int y, int x)
 			if (ny < 0 || ny >= r || nx >= c || nx < 0 || visited_l[ny][nx]) continue;
 
 			visited_l[ny][nx] = true;
-			
 			if (lake[ny][nx] == 'L') return true;
+			
 			// 백조를 탐색할 위치 -> 처음부터 다시 탐색하지 않는다.     
 			else if (lake[ny][nx] == 'X') {
 				//cout << ny << " : " << nx << " 얼음으로 더이상 탐색 불가" << '\n';
@@ -51,9 +51,9 @@ bool check_meet(int y, int x)
 	}
 
 	// 다음에 탐색할 물의 좌표
-	//l = l_temp;
+	l = l_temp;
 	// 큐 초기화
-	//Qclear(l_temp);
+	Qclear(l_temp);
 
 	return false;
 }
@@ -131,8 +131,8 @@ int main()
 	{
 		melt();
 		q = q_temp;
-		l = l_temp;
-		Qclear(l_temp);
+		//l = l_temp;
+		//Qclear(l_temp);
 		Qclear(q_temp);
 
 	}
