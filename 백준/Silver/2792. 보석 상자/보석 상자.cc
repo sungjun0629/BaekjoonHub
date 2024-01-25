@@ -5,10 +5,10 @@
 typedef long long ll;
 using namespace std;
 
-ll n, m, t; 
+ll n, m; int t;
 // 보석의 개수를 담는다.
 vector<int> j_cnt;
-ll low = 1, hi = -1; ll rst = 987654321;
+int low = 1, hi = -1; ll rst = 987654321;
 
 
 // 학생 수 이내로 분배할 수 있는지 확인을 한다.
