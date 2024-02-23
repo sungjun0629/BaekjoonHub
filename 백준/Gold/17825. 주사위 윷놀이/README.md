@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 2028 KB, 시간: 100 ms
+메모리: 2028 KB, 시간: 64 ms
 
 ### 분류
 
@@ -12,13 +12,13 @@
 
 ### 제출 일자
 
-2024년 2월 12일 09:58:31
+2024년 2월 23일 15:12:36
 
 ### 문제 설명
 
 <p>주사위 윷놀이는 다음과 같은 게임판에서 하는 게임이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/43409ac6-54bf-4a21-b542-e01a8211e59f/-/preview/" style="width: 640px; height: 585px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 640px; height: 585px;"></p>
 
 <ul>
 	<li>처음에는 시작 칸에 말 4개가 있다.</li>
